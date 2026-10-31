@@ -1,0 +1,68 @@
+name: 🐛 Bug report
+description: Something isn't working as expected
+title: "[Bug]: "
+labels: ["bug", "triage"]
+assignees:
+  - regg00
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for taking the time to report a bug. The more detail you give, the faster we can fix it.
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: A clear description of the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Go to ...
+        2. Click on ...
+        3. See error
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should have happened instead?
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Blocker – the app or a key flow is unusable
+        - High – a major feature is broken
+        - Medium – a workaround exists
+        - Low – cosmetic or minor
+    validations:
+      required: true
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: How often does it happen?
+      options:
+        - Every time
+        - Sometimes
+        - Happened once
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Device, OS, browser and app version, if relevant.
+      placeholder: "e.g. iPhone 15, iOS 18, Safari / MacBook, Chrome 130"
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Screenshots, videos or logs
+      description: Drag and drop files here, or paste error messages.
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
